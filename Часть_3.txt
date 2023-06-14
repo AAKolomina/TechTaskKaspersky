@@ -1,0 +1,4 @@
+SELECT employees.Dep_name, employees.emp_id, employees.emp_name, AVG(salaries.salary) as avg_salary 
+FROM employees INNER JOIN salaries ON employees.emp_id = salaries.emp_id
+GROUP BY dep_name
+HAVING AVG(salary) < 500;
